@@ -119,7 +119,8 @@ seja falso ou indefinido.
 
 21. É possível adicionar novas propriedades a um objeto depois de criado? Como? 
 Sim, em JavaScript é possível adicionar propriedades a um objeto mesmo depois de sua criação, pois os objetos são dinâmicos. Isso pode ser feito de forma direta, 
-como em um objeto pessoa = {nome: "Ana"} ao adicionar pessoa.idade = 16. Também é possível adicionar propriedades com nomes compostos usando colchetes, por exemplo pessoa["cidade natal"] = "Patrocínio". Além disso, é possível utilizar métodos como Object.assign para mesclar novos atributos em um objeto existente ou ainda usar
+como em um objeto pessoa = {nome: "Ana"} ao adicionar pessoa.idade = 16. Também é possível adicionar propriedades com nomes compostos usando colchetes, por exemplo 
+pessoa["cidade natal"] = "Patrocínio". Além disso, é possível utilizar métodos como Object.assign para mesclar novos atributos em um objeto existente ou ainda usar
 o operador spread, como em let nova = {...pessoa, curso: "Informática"}. Caso se deseje controlar atributos, pode-se usar Object.defineProperty para criar
 propriedades com configurações específicas.
 
