@@ -7,6 +7,6 @@ let tempo = distancia / velocidade
 let litros = distancia / consumo
 let custo = litros * precoCombustivel
 
-console.log("Tempo de viagem (h): " + tempo)
-console.log("Litros consumidos: " + litros)
-console.log("Custo estimado da viagem: R$ " + custo)
+alert("Tempo de viagem (h): " + tempo)
+alert("Litros consumidos: " + litros)
+alert("Custo estimado da viagem: R$ " + custo)

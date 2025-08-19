@@ -6,4 +6,4 @@ let n3 = Number( prompt("Insira a nota 3:"))
 let p3 = Number( prompt("Insira o peso da nota 3: "))
 
 
-console.log("A média ponderada é: " + ((n1*p1)+(n2*p2)+(n3*p3)) / (p1+p2+p3))
+alert("A média ponderada é: " + ((n1*p1)+(n2*p2)+(n3*p3)) / (p1+p2+p3))
