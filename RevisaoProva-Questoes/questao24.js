@@ -28,9 +28,9 @@ if (poke2.tipo === "terra" && poke1.tipo === "agua") poke2.poder += 3
 console.log(poke1.nome + " (Poder: " + poke1.poder + ") VS " + poke2.nome + " (Poder: " + poke2.poder + ")")
 
 if (poke1.poder > poke2.poder) {
-  console.log("Vencedor: " + poke1.nome)
+  alert("Vencedor: " + poke1.nome)
 } else if (poke2.poder > poke1.poder) {
-  console.log("Vencedor: " + poke2.nome)
+  alert("Vencedor: " + poke2.nome)
 } else {
-  console.log("Empate!")
+  alert("Empate!")
 }

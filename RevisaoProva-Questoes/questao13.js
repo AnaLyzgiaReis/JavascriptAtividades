@@ -6,7 +6,7 @@ let pessoa = {
 }
 
 if (pessoa.temperatura >= 37.5) {
-  console.log(pessoa.nome + " está com febre!")
+  alert(pessoa.nome + " está com febre!")
 } else {
-  console.log(pessoa.nome + " não está com febre.")
+  alert(pessoa.nome + " não está com febre.")
 }

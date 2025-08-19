@@ -7,11 +7,11 @@ console.log("Filme: " + filme.nome)
 console.log("Classificação: " + filme.classificacao + " anos")
 
 if (filme.classificacao < 12) {
-  console.log("Faixa etária: Livre")
+  ("Faixa etária: Livre")
 } else if (filme.classificacao < 16) {
-  console.log("Faixa etária: 12+")
+  alert("Faixa etária: 12+")
 } else if (filme.classificacao < 18) {
-  console.log("Faixa etária: 16+")
+  alert("Faixa etária: 16+")
 } else {
-  console.log("Faixa etária: 18+")
+  alert("Faixa etária: 18+")
 }

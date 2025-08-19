@@ -14,12 +14,12 @@ let livro2 = {
   nacionalidade: prompt("O autor é brasileiro? (sim/não)")
 }
 
-console.log("Livro mais antigo: " + (livro1.ano < livro2.ano ? livro1.titulo : livro2.titulo))
-console.log("Livro com mais páginas: " + (livro1.paginas > livro2.paginas ? livro1.titulo : livro2.titulo))
+("Livro mais antigo: " + (livro1.ano < livro2.ano ? livro1.titulo : livro2.titulo))
+alert("Livro com mais páginas: " + (livro1.paginas > livro2.paginas ? livro1.titulo : livro2.titulo))
 
 if (livro1.nacionalidade === "sim") {
-  console.log("Livro com autor brasileiro: " + livro1.titulo)
+  alert("Livro com autor brasileiro: " + livro1.titulo)
 } 
 if (livro2.nacionalidade === "sim") {
-  console.log("Livro com autor brasileiro: " + livro2.titulo)
+  alert("Livro com autor brasileiro: " + livro2.titulo)
 }

@@ -5,7 +5,7 @@ let produto = {
 }
 
 if (produto.emEstoque) {
-  console.log("Produto disponível")
+  alert("Produto disponível")
 } else {
-  console.log("Produto indisponível")
+  alert("Produto indisponível")
 }
