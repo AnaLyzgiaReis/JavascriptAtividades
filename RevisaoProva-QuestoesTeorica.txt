@@ -1,77 +1,64 @@
-Revisão Prova de Programação – 2º Trimestre - Perguntas Teóricas
+Revisão Prova de Programação – 2º Trimestre - Questões Teóricas
 
 1. O que é o retorno NaN em Javascript? Cite um tipo de condição em que este tipo pode ser gerado.
-
 O valor especial NaN (Not-a-Number) em JavaScript indica que ocorreu uma operação numérica inválida. Apesar de ser considerado do tipo number, ele não é igual nem mesmo a si próprio. Esse retorno pode ser gerado, por exemplo, quando se tenta converter uma string não numérica em número, como no caso de Number("10px"), ou quando se realiza uma operação matemática sem sentido, como Math.sqrt(-1) ou 0 dividido por 0.
 
 2. É possível adicionar uma configuração CSS de múltiplas formas em um código HTML. Cite essas formas e dê exemplos de cada uma. Cite também a diferença entre utilizar cada uma dessas formas. 
-
 As configurações de CSS podem ser aplicadas de três formas principais em um código HTML. A primeira é inline, quando se usa o atributo style diretamente no elemento, por exemplo: <p style="color: red;">Texto</p>. Essa forma tem maior prioridade, mas dificulta a manutenção. A segunda forma é interna, quando se utiliza a tag <style> dentro do <head>, como em <style> p { color: red; } </style>. Essa opção é útil em páginas pequenas, mas ainda mistura conteúdo e estilo. A terceira é externa, quando se cria um arquivo separado com extensão .css e se importa usando <link rel="stylesheet" href="estilos.css"> dentro do <head>. Essa é a maneira mais recomendada, pois facilita a manutenção, permite reaproveitamento do estilo em várias páginas e melhora o desempenho com cache. Existe ainda a opção de usar @import dentro de um arquivo CSS, mas não é muito recomendada, pois pode prejudicar o desempenho.
 
 3. Explique a diferença entre as tags <div> e <span>. Dê exemplos de quando usar cada uma. 
-
 A tag <div> representa um elemento de bloco, ocupando toda a largura disponível e quebrando a linha. Ela é geralmente usada para estruturar seções ou agrupar elementos em blocos maiores, como por exemplo: <div><h2>Produto</h2><p>Descrição</p></div>. Já a tag <span> representa um elemento inline, ou seja, não quebra a linha e é usada para estilizar partes específicas de um texto. Por exemplo, em um parágrafo como <p>O preço é <span style="color: green;">R$ 50,00</span></p>, o <span> é usado apenas para destacar o preço dentro do fluxo do texto.
 
 4. Descreva o propósito da tag <head> em um documento HTML e cite pelo menos três elementos que podem estar dentro dela. 
-
 A tag <head> de um documento HTML é responsável por armazenar informações e metadados que não são exibidos diretamente no corpo da página, mas que configuram seu funcionamento e apresentação. Dentro dela é comum encontrar a tag <title>, que define o título da aba do navegador, a tag <meta charset="utf-8">, que define a codificação de caracteres, e também links para folhas de estilo externas, como <link rel="stylesheet" href="estilo.css">. Além disso, podem estar presentes tags <script> para importar JavaScript, <meta name="viewport" content="width=device-width, initial-scale=1"> para adaptar o site a dispositivos móveis e <link rel="icon" href="favicon.ico"> para definir o ícone exibido na aba.
 
 5. Diferencie as listas ordenadas (<ol>) das listas não ordenadas (<ul>). Crie um exemplo de cada. 
-
 As listas ordenadas, criadas com a tag <ol>, são utilizadas quando a ordem dos itens importa, como em um passo a passo. Um exemplo seria: <ol><li>Ligar o forno</li><li>Preparar a massa</li><li>Assar o bolo</li></ol>. Já as listas não ordenadas, criadas com <ul>, são usadas quando os itens não seguem uma sequência, apenas uma enumeração sem hierarquia, como em uma lista de compras: <ul><li>Leite</li><li>Pão</li><li>Café</li></ul>.
 
 6. O que significa a propriedade display no CSS? Compare o comportamento de block, inline e inline-block. 
-
 A propriedade display no CSS define como os elementos devem ser exibidos na página. Quando um elemento tem display block, ele ocupa toda a largura disponível e força uma quebra de linha, como acontece com parágrafos e divs. No caso de display inline, o elemento não quebra a linha e aparece ao lado de outros elementos, mas não respeita propriedades de largura e altura, sendo comum em spans ou links. Já o display inline-block combina características dos dois: o elemento se mantém na mesma linha, mas aceita definições de largura e altura, sendo útil para botões e menus.
 
 7. Explique o que é o Box Model no CSS e descreva suas partes de dentro para fora. 
-
 O Box Model no CSS é o modelo que define como cada elemento é representado visualmente em forma de uma caixa retangular. Ele é composto por quatro camadas. No centro está o conteúdo, como texto ou imagens. Ao redor dele está o padding, que é o espaço interno entre o conteúdo e a borda. Em seguida, temos a border, que é a borda do elemento. Por último está a margin, que é o espaço externo entre o elemento e os elementos vizinhos. Dessa forma, a largura e a altura final de um elemento não dependem apenas de seu conteúdo, mas também de margens, bordas e espaçamentos internos.
 
 8. Qual é a função das tags semânticas no HTML5, como <header>, <section>, <article> e <footer>? Dê exemplos de uso. 
-
 As tags semânticas do HTML5 têm a função de dar significado à estrutura da página, ajudando tanto na organização do código quanto na acessibilidade e otimização para buscadores. A tag <header> representa um cabeçalho, geralmente com título ou menu. A tag <section> é usada para agrupar conteúdos temáticos, por exemplo uma seção de artigos recentes. A tag <article> representa um conteúdo independente, como uma notícia ou postagem de blog. Já o <footer> é usado como rodapé, geralmente com créditos ou informações adicionais. Um exemplo seria: <header><h1>Blog</h1></header><section><article><h2>Notícia</h2><p>Texto da notícia</p></article></section><footer>&copy; 2025</footer>.
 
 9. Explique o que é e para que serve o atributo target="_blank" em um link. Quais cuidados de segurança devem ser tomados ao utilizá-lo? 
-
 O atributo target="_blank" em um link serve para abrir a página de destino em uma nova aba ou janela do navegador. Embora seja útil para manter a página original aberta, ele traz riscos de segurança, pois o site aberto pode acessar a página de origem através do objeto window.opener e realizar ataques como o chamado tabnabbing. Para evitar esse problema, é recomendado utilizar também os atributos rel="noopener noreferrer", garantindo que a página de destino não consiga manipular a aba original e, ao mesmo tempo, removendo informações de referência do usuário.
 
 10. O que é a propriedade flex no CSS e como ela é usada? 
-
 A propriedade flex é usada em elementos filhos dentro de um contêiner flexível e serve para definir como esses elementos irão crescer, encolher e ocupar espaço. Ela é uma abreviação de três valores: flex-grow, flex-shrink e flex-basis. Por exemplo, em uma linha de três elementos, se um deles tem flex 2 1 200px, significa que ele vai crescer o dobro em relação aos demais quando houver espaço sobrando, pode encolher quando necessário e terá como base inicial 200 pixels. Já um item com flex 0 0 120px não cresce nem encolhe, mantendo tamanho fixo de 120 pixels. Essa propriedade é muito usada para construir layouts responsivos e organizados.
 
 11. O que são transições (transition) no CSS e como podem ser usadas para criar efeitos de animação simples? Crie um exemplo básico. 
-
 Transições no CSS são recursos que permitem animar mudanças de valores em propriedades de forma gradual, ao invés de imediata. São usadas para suavizar interações, como quando o usuário passa o mouse sobre um botão. Por exemplo, se um botão tem cor azul e ao ser hoverado fica verde, a transição pode fazer essa mudança acontecer de maneira suave em meio segundo. Para isso, pode-se escrever no CSS: .botao { background-color: blue; transition: background-color 0.5s ease; } .botao:hover { background-color: green; }. Assim, ao passar o mouse, a cor azul se transforma suavemente em verde.
 
 16. Quais as diferenças entre criar uma variável do tipo const, var e let? Cite exemplos. 
-
 As diferenças principais entre const, var e let estão relacionadas ao escopo, possibilidade de reatribuição e hoisting. A palavra-chave var possui escopo de função, ou seja, mesmo se declarada dentro de um bloco, será acessível fora dele. Já let e const têm escopo de bloco, permanecendo disponíveis apenas dentro de chaves onde foram declaradas. Const não permite reatribuição, mas permite alterar valores internos de objetos e arrays. Var sofre hoisting e é inicializada como undefined, enquanto let e const também sofrem hoisting, mas ficam em zona morta temporal, gerando erro se acessadas antes da declaração. Por exemplo, var x = 1 dentro de um if poderá ser acessada fora do if, mas let y = 2 dentro do mesmo bloco não poderá. Const z = 3 não pode ser reatribuído, mas se for um objeto, suas propriedades podem ser alteradas.
 
-18. Qual a diferença entre JavaScript e Java? 
+17. Responda no console o que será impresso ou qual erro ocorrerá.
+No código apresentado, a execução começa com a declaração das variáveis y e z usando let e const, com valores 20 e 30, respectivamente. Em seguida, há uma tentativa de acessar a variável x antes de sua declaração com var, o que provoca um ReferenceError, pois var sofre hoisting, mas a variável ainda não está inicializada na linha de acesso, estando na chamada zona morta temporal. Depois, x recebe 15 e y é atualizado para 25, enquanto z mantém seu valor 30. Ao declarar var x = 10, a variável x passa a ter o valor 10, já que var permite redefinição.
+Dentro do primeiro bloco, a variável a, declarada com var, tem escopo global, ou seja, permanece acessível fora do bloco, enquanto b e c, declaradas com let e const, existem apenas dentro do bloco, sendo inacessíveis fora dele. Portanto, ao usar console.log(a) fora do bloco, é possível ver o valor 100, mas b e c resultam em undefined ao usar typeof, porque não existem nesse escopo.
+No segundo bloco, a variável m declarada com var também “vaza” para fora, estando disponível globalmente, enquanto n e o permanecem restritas ao bloco, gerando ReferenceError ao tentar acessá-las fora dele. Além disso, ocorre um erro de sintaxe no código ao escrever console.Log com “L” maiúsculo, pois o correto é console.log, gerando TypeError caso o código seja executado.
+Em resumo, esse código demonstra claramente o comportamento de escopo e hoisting em JavaScript: var possui escopo de função e pode ser acessada antes da declaração (como undefined), enquanto let e const possuem escopo de bloco e causam erro se acessadas antes da declaração. Também evidencia que const não pode ser reatribuída, e que erros de digitação em comandos, como console.Log, impedem a execução correta do código.
 
+18. Qual a diferença entre JavaScript e Java? 
 Apesar dos nomes semelhantes, JavaScript e Java são linguagens distintas. O JavaScript é dinâmico, fracamente tipado e baseado em protótipos, sendo muito usado para web, tanto no front-end quanto no back-end com Node.js. Ele roda geralmente em navegadores e é interpretado com otimizações JIT. Já o Java é uma linguagem de tipagem estática, fortemente orientada a objetos baseada em classes e interfaces, muito usada em sistemas corporativos e também em desenvolvimento de aplicativos Android. Enquanto o JavaScript funciona em modelo de execução assíncrono, com event loop, o Java usa múltiplas threads e compila para bytecode executado pela máquina virtual JVM.
 
 19. Qual a diferença entre == e === no JavaScript? Dê exemplos práticos. 
-
 O operador == realiza comparação com coerção de tipo, ou seja, converte valores diferentes antes de comparar. Por isso, 0 == false resulta em verdadeiro, assim como "42" == 42. Já o operador === faz comparação estrita, levando em conta tipo e valor, sendo portanto mais seguro. Assim, 0 === false resulta em falso e "42" === 42 também é falso, pois string e número não são do mesmo tipo. Outro exemplo é null == undefined, que resulta em verdadeiro, mas null === undefined é falso. Por isso, recomenda-se usar sempre o operador === para evitar resultados inesperados.
 
 20. O que são operadores lógicos (&&, ||, !) e como eles podem ser usados em condicionais? Exemplifique. 
-
 Os operadores lógicos em JavaScript são usados para combinar ou inverter expressões. O operador && (E lógico) retorna verdadeiro somente se ambas as condições forem verdadeiras. O operador || (OU lógico) retorna verdadeiro se pelo menos uma condição for verdadeira. Já o operador ! (negação) inverte o valor lógico da expressão. Esses operadores também podem retornar valores não booleanos devido ao conceito de curto-circuito. Por exemplo, em uma condição if (user && user.logado), o código só será executado se user existir e estiver logado. Para fornecer valores padrão, pode-se usar let porta = config.port || 3000, que usará 3000 caso config.port seja falso ou indefinido.
 
 21. É possível adicionar novas propriedades a um objeto depois de criado? Como? 
-
 Sim, em JavaScript é possível adicionar propriedades a um objeto mesmo depois de sua criação, pois os objetos são dinâmicos. Isso pode ser feito de forma direta, como em um objeto pessoa = {nome: "Ana"} ao adicionar pessoa.idade = 16. Também é possível adicionar propriedades com nomes compostos usando colchetes, por exemplo pessoa["cidade natal"] = "Patrocínio". Além disso, é possível utilizar métodos como Object.assign para mesclar novos atributos em um objeto existente ou ainda usar o operador spread, como em let nova = {...pessoa, curso: "Informática"}. Caso se deseje controlar atributos, pode-se usar Object.defineProperty para criar propriedades com configurações específicas.
 
 22. Qual a diferença entre null e undefined no JavaScript? 
-
 Undefined é o valor padrão de variáveis declaradas, mas não inicializadas, de parâmetros que não foram passados e de propriedades inexistentes de objetos. Null, por outro lado, representa ausência intencional de valor, sendo definido explicitamente pelo programador. Por exemplo, ao declarar let x, seu valor inicial será undefined. Se um objeto não possuir uma propriedade chamada idade, ao acessá-la também será retornado undefined. Já se quisermos dizer que uma variável está vazia de forma proposital, como let y = null, então estamos declarando que y não tem valor no momento, mas de forma intencional.
 
 23. O que é um objeto em JavaScript e como ele é declarado? Dê um exemplo básico. 
-
 Um objeto em JavaScript é uma estrutura de dados que armazena pares de chave e valor e pode conter tanto propriedades quanto métodos. Ele é usado para representar entidades do mundo real de forma organizada. Um exemplo de declaração literal seria: let aluno = {nome: "Ana", notas: [9, 8.5], media: function() { return (this.notas[0] + this.notas[1]) / 2; }}. Também é possível criar objetos usando funções construtoras ou classes, por exemplo, function Pessoa(nome) { this.nome = nome; } ou class Pessoa { constructor(nome) { this.nome = nome; } falar() { return "Oi, eu sou " + this.nome; }}. Dessa forma, objetos permitem reunir informações e comportamentos em uma única estrutura.
 
 25. Revise todas as atividades desenvolvidas e armazenadas no github sobre html e css.
-
 ✔
